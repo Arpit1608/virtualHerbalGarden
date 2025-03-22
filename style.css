@@ -1,0 +1,380 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+   
+}
+
+
+.mainvideo{
+    /* background-color: #0F0D0D; */
+    background-color: rgb(171, 175, 166);
+}
+
+.page1{
+    min-height: 100vh;
+    width: 100%;
+}
+
+.page1 h1{
+    margin-top: 12vw;
+    font-size: 7vw;
+    font-weight: 500;
+    margin-left: 6vw;
+    padding-top: 10px;
+}
+
+.page1 h2{
+    font-size: 7vw;
+    font-weight: 400;
+    margin-left: 26vw;
+}
+
+.page1 video{
+    width: 75%;
+    margin-top: 6vw;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,0);
+    border-radius: 23px;
+}
+
+
+.page2{
+    min-height: 150vh;
+    width: 100%;
+}
+
+@media (max-width:905px){
+    .page1{
+        min-height: 100%;
+        width: 100%;
+    }
+}
+
+@keyframes appear {
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes slide1 {
+    from{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes slide2 {
+    from{
+        opacity: 0;
+        transform: translateX(+100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.animeblock{
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+.animeline1{
+    
+    animation: slide1 linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+.animeline2{
+    animation: slide2 linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+
+
+
+
+
+
+/*Search box section*/
+
+
+.searchbox{
+    display: flex;
+    margin-left: 8%;
+    margin-top: 40px;
+    margin-bottom: 18px;
+}
+
+.boxx{
+    height: 50px;
+    display: flex;
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: rgb(200, 221, 186);
+    border-radius: 30px;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.boxx:hover input{
+    width: 76vw;
+}
+
+
+.boxx input{
+    width: 0;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    transition: 0.8s;
+    background: transparent;
+}
+
+.boxx a .fa-magnifying-glass{
+    color: rgb(24, 48, 7);
+    font: 18px;
+}
+
+::placeholder{
+    
+    color: rgb(2, 8, 2);
+}
+
+
+
+/*Quiz section */
+
+@keyframes slideleft {
+    from{
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes slideright {
+    from{
+        opacity: 0;
+        transform: translateX(200px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.quizarrowleft{
+    animation: slideleft linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+.quizarrowright{
+    animation: slideright  linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+
+
+
+
+
+
+
+/*Treament animation section*/
+
+.timelinee{
+    
+    position: relative;
+    max-width: 1200px;
+    margin: 100px auto;
+   
+}
+
+.containe{
+    padding: 10px 50px;
+    position: relative;
+    width: 50%;
+    animation: movedown 1s linear forwards;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+    opacity: 0;
+}
+
+@keyframes movedown{
+    0%{
+        opacity: 1;
+        transform: translateY(-30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+.containe:nth-child(1){
+    animation-delay: 0s;
+}
+.containe:nth-child(2){
+    animation-delay: 0.5s;
+}
+.containe:nth-child(3){
+    animation-delay: 2s;
+}
+.containe:nth-child(4){
+    animation-delay: 3s;
+}
+.containe:nth-child(5){
+    animation-delay: 4s;
+}
+.containe:nth-child(6){
+    animation-delay: 4.5s;
+}
+
+
+
+.text-box{
+    padding: 20px 30px;
+    background-color: rgb(221, 230, 237);
+    position: relative;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.left-containe{
+    left: 0;
+}
+
+.right-containe{
+    right: -50%;
+}
+
+.containe img{
+    position: absolute;
+    width: 40px;
+    border-radius: 50%;
+    right: -20px;
+    top: 32px;
+    z-index: 10;
+}
+
+.right-containe img{
+    left: -20px;
+}
+
+.timelinee::after{
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background-color: green;
+    top: 0;
+    left: 50%;
+    margin-left: -3px;
+    z-index: -1;
+    animation: moveline 6s linear forwards;
+    animation-timeline: view();
+   
+}
+
+@keyframes moveline{
+    from{
+        height: 0;
+    }
+    to{
+        height: 100%;
+    }
+}
+
+.text-box h2{
+    font-weight: 600;
+    font-size:x-large;
+}
+
+.left-containe-arrow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid rgb(221, 230, 237);
+    right: -15px;
+}
+
+.right-containe-arrow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid rgb(221, 230, 237);
+    left: -15px;
+}
+
+@media screen and (max-width: 600px) {
+    .timelinee{
+        margin: 50px auto;
+    }
+    .timelinee::after{
+        left: 31px;
+    }
+    .containe{
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 25px;
+    }
+
+    .text-box{
+        font-size: 13px;
+    }
+    .right-containe{
+        left: 0;
+    }
+
+    .left-containe img, .right-containe img{
+        left: 10px;
+    }
+    .left-containe-arrow, .right-containe-arrow{
+        border-right: 15px solid rgb(221, 230, 237);
+        border-left: 0;
+        left: -15px;
+    }
+}
+
+
+
+
+
+
+
+

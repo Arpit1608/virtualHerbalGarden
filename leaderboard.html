@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="leaderboard.css">
+</head>
+
+<body>
+    <div class="leaderboard">
+        <img src="images/leaderboarImg.png" class="theme-img">
+        <div class="descriptions">
+            <h3 class="text-[20px] md:text-4xl font-semibold">Herbal Knowledge Quiz Leaderboard</h3>
+            <input type="text" class="seerch mt-4 " placeholder="Search name..." id="seerch" oninput="search()">
+        </div>    
+
+            <table>
+                <thead>
+                    <tr>
+                        <td></td>
+                        <td class=" pl-4 font-semibold">
+                            Player
+                        </td>
+                        <td class=" font-semibold">
+                            Score
+                        </td>
+                        <td class=" font-semibold">
+                            Average
+                        </td>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td id="winner">1</td>
+                        <td><img src="images/Tprofilepic.png"> <p class="tracking-wider font-semibold"> Tyler </p> </td>
+                        <td>900</td>
+                        <td>95.067</td>
+                    </tr>
+
+                    <tr>
+                        <td id="runner-up">2</td>
+                        <td><img src="images/Aprofilepic.png"><p class="tracking-wider font-semibold"> Ava </p></td>
+                        <td>850</td>
+                        <td>90.067</td>
+                    </tr>
+
+                    <tr>
+                        <td id="second-runner-up">3</td>
+                        <td><img src="images/Mprofilepic.png"><p class="tracking-wider font-semibold"> Mason </p></td>
+                        <td>800</td>
+                        <td>85.443</td>
+                    </tr>
+
+                    <tr>
+                        <td>4</td>
+                        <td><img src="images/Rprofilimg.png"><p class="tracking-wider font-semibold"> Riley </p></td>
+                        <td>770</td>
+                        <td>83.815</td>
+                    </tr>
+
+                    <tr>
+                        <td>5</td>
+                        <td><img src="images/Jprofilepic.png"><p class="tracking-wider font-semibold"> James </p></td>
+                        <td>730</td>
+                        <td>78.323</td>
+                    </tr>
+
+                    <tr>
+                        <td>6</td>
+                        <td><img src="images/Aprofilepic.png"><p class="tracking-wider font-semibold"> Aiden </p></td>
+                        <td>730</td>
+                        <td>78.323</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        
+    </div>
+
+    <script src="leaderboard.js"></script>
+</body>
+
+</html>

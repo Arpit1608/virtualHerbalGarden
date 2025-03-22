@@ -1,0 +1,117 @@
+.body-of-neem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-slider{
+    position: relative;
+    width: 600px;
+    height: 395px;
+    margin: 10px;
+    background-color: rgb(214, 227, 211);
+}
+
+.img-slider .slidee{
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    clip-path: circle(0% at 0 50%);
+}
+
+.img-slider .slidee.active{
+    clip-path: circle(150% at 0 50%);
+    transition: 2s;
+    transition-property: clip-path;
+}
+
+.img-slider .slidee img{
+    z-index: 2;
+    width: 100%;
+    border-radius: 5px;
+    object-fit:cover;
+}
+
+.img-slider .slidee .info{
+    position: absolute;
+    top: 0;
+    padding: 15px 30px;
+}
+
+.img-slider .slidee .info h2{
+    color: rgb(234, 147, 7);
+    font-size: 45px;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.img-slider .navigatorr{
+    z-index: 2;
+    position: absolute;
+    display: flex;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.img-slider .navigatorr .btun{
+    background: rgba(107, 58, 58, 0.5);
+    width: 12px;
+    height: 12px;
+    margin: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+.img-slider .navigatorr .btun.active{
+    background-color: rgb(74, 74, 124);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+@media(max-width: 650px){
+    .img-slider{
+        width: 65vw;
+        height: 30vh;
+    }
+
+    .img-slider .slidee img{
+        z-index: 2;
+        margin: 0 auto;
+        width: 100%;
+        height: 25vh;
+        border-radius: 5px;
+        object-fit:cover;
+    }
+
+    .img-slider .slidee .info{
+        padding: 10px 25px;
+    }
+
+    .img-slider .slidee .info h2{
+        font-size: 25px;
+    }
+
+    .img-slider .navigatorr{
+        bottom: 1px;
+    }
+
+    .img-slider .navigatorr .btun{
+        
+        width: 10px;
+        height: 10px;
+        margin: 8px;
+    }
+
+}
+
+
+
+
+
+
+/* bookmark color change */
+.bg-bookmark-color{
+    color: rgb(16, 16, 172);
+}

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/f8ee06158f.js"></script>
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="neemcontent.css">
+</head>
+<body>
+        
+    <div class="flex flex-col items-center">
+
+        <!-- name of plant -->
+        <div class="my-3 text-2xl md:text-4xl font-bold text-green-800">Neem (Azadirachta indica) <i class="fa-solid fa-bookmark hover:cursor-pointer hover:scale-110" id="culur" onclick="checkClass()"></i></div>
+
+        <!-- image of plant -->
+        <div class="my-3 h-36 w-60 md:h-56 md:w-96 mx-2">
+            <img class="rounded-lg" src="images/neem.png" alt="">
+        </div>
+
+
+        <div class="flex flex-col items-center">
+            <!-- Button to trigger pop-up -->
+            <button id="openModal"
+                class="bg-blue-500 text-white px-4 py-2 md:py-3 rounded tracking-wider font-semibold hover:bg-blue-400">
+                360* View
+            </button>
+
+            <!-- Pop-up Modal -->
+            <div id="videoModal"
+                class="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center hidden">
+                <div class="bg-white p-6 rounded-lg max-w-lg w-full">
+                    <button id="closeModal" class="float-right text-gray-500 hover:text-gray-700">
+                        &times;
+                    </button>
+                    <div class="pt-6">
+                        <video id="popupVideo" class="w-full rounded-lg" controls>
+                            <source src="video/20240905_002301.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- about neem -->
+    <div class="mt-16 md:mt-20">
+
+        <!-- about section -->
+         <div class="bg-blue-50">
+        <h1 class="bg-blue-200 text-3xl md:text-7xl font-bold pl-4 md:pl-7 tracking-wider text-green-900 py-2">About Neem </h1>
+        <p class="ml-3 mt-3 py-4">Neem, scientifically known as Azadirachta indica, is a tree native to the Indian
+            subcontinent, renowned for its wide-ranging medicinal properties. The history of neem usage in Ayurveda
+            dates back thousands of years, making it one of the most revered plants in traditional Indian medicine. Neem
+            is mentioned in ancient Ayurvedic texts like the Charaka Samhita and Sushruta Samhita, where it is referred
+            to as "Sarva Roga Nivarini," meaning "the healer of all ailments." The Vedas, the oldest scriptures of
+            Hinduism, also reference neem for its health benefits. In modern times, neem continues to be a subject of
+            scientific research for its potential in treating various diseases, including malaria, diabetes, and cancer.
+            Its extracts are used in cosmetics, pharmaceuticals, and personal care products. Beyond medicine, neem has
+            played a significant role in agriculture as a natural pesticide and fertilizer. Neem oil and neem cakes have
+            been used to protect crops from pests and enrich the soil. <span class="hidden md:inline">Lorem ipsum dolor
+                sit, amet consectetur adipisicing elit. Molestiae quis cum quidem voluptate blanditiis asperiores
+                aperiam porro nobis debitis? Aspernatur velit modi suscipit! Aut distinctio amet ducimus dolor incidunt
+                totam, voluptates ab placeat et quos! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed pariatur sint, asperiores veritatis nemo vel. Quas, ipsam commodi sint veritatis tenetur corrupti, cumque quod natus veniam odio ab, velit aliquam? Libero ratione quod saepe. Quae quibusdam, fuga facilis voluptatem aliquid ipsam rerum sit? Obcaecati sapiente amet placeat consequatur voluptas voluptatem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet dolorem omnis quasi asperiores consequuntur fugiat modi velit eum in ipsa beatae distinctio ullam vel dolore quidem et nulla, esse quam!</span> </p>
+            </div>
+
+
+        <!-- pictures sections -->
+        <div class="body-of-neem mt-16 md:mt-20">
+            <div class="img-slider">
+                <div class="slidee active">
+                    <img class="h-[395px]" src="images/neem plant 2.png" alt="">
+                    <div class="info">
+                        <h2>PLANT</h2>
+                    </div>
+                </div>
+
+                <div class="slidee">
+                    <img class="h-[395px]" src="images/neem bark.png" alt="">
+                    <div class="info">
+                        <h2>TREE BARK</h2>
+                    </div>
+                </div>
+
+                <div class="slidee">
+                    <img class="h-[395px]" src="images/neem leaves.png" alt="">
+                    <div class="info">
+                        <h2>LEAVES</h2>
+                    </div>
+                </div>
+
+                <div class="slidee">
+                    <img class="h-[395px]" src="images/neem tree.png" alt="">
+                    <div class="info">
+                        <h2>NEEM TREE</h2>
+                    </div>
+                </div>
+
+                <div class="navigatorr">
+                    <div class="btun active"></div>
+                    <div class="btun"></div>
+                    <div class="btun"></div>
+                    <div class="btun"></div>
+                </div>
+                
+            </div>
+        </div>
+
+
+        <div class="w-[100%] py-0.5 bg-slate-400 my-4"></div>
+
+        <!-- avurvedic uses of neem -->
+         <div class="mt-12 pl-3">
+
+            <div class="text-3xl md:text-7xl font-bold text-slate-700 tracking-wider pb-2 text-center">AYURVEDIC USES</div>
+
+            <div class="text-2xl md:text-4xl font-semibold pl-2 mt-3">1. Skin Health</div>
+            <ul style="list-style-type:square;" class="pl-7 mt-3" >
+                <li class="font-semibold">Treats Acne and Skin Infections <span class="hidden md:inline font-normal">: Neem has antibacterial and anti-inflammatory properties, making it effective for treating acne, eczema, and psoriasis.</span></li>
+                <li class="font-semibold">Promotes Wound Healing <span class="hidden md:inline font-normal">: Neem paste is applied to wounds, cuts, and insect bites to speed up healing and prevent infection.</span></li>
+                <li class="font-semibold">Reduces Pigmentation <span class="hidden md:inline font-normal">: It helps in reducing dark spots, blemishes, and pigmentation when used as a face mask or oil.</span></li>
+            </ul>
+
+            <div class="text-2xl md:text-4xl font-semibold pl-2 mt-3">2. Digestive Health</div>
+            <ul style="list-style-type:square;" class="pl-7 mt-3" >
+                <li class="font-semibold">Relieves Digestive Issues <span class="hidden md:inline font-normal">:  Neem is used to treat digestive problems like indigestion, bloating, and ulcers. Its bitter properties stimulate digestive enzymes.</span></li>
+                <li class="font-semibold">Anti-parasitic <span class="hidden md:inline font-normal">: Neem helps in treating intestinal worms and other parasites.</span></li>
+            </ul>
+
+            <div class="text-2xl md:text-4xl font-semibold pl-2 mt-3">3. Hair Health</div>
+            <ul style="list-style-type:square;" class="pl-7 mt-3" >
+                <li class="font-semibold">Treats Dandruff <span class="hidden md:inline font-normal">: Neem oil or paste is applied to the scalp to treat dandruff and soothe an itchy scalp.</span></li>
+                <li class="font-semibold">Promotes Hair Growth <span class="hidden md:inline font-normal">: It strengthens hair roots and reduces hair fall, promoting healthier hair growth.</span></li>
+                <li class="font-semibold">Prevents Lice <span class="hidden md:inline font-normal">: Neem's natural insecticidal properties make it effective in treating and preventing lice.</span></li>
+            </ul>
+
+         </div>
+
+
+         <div class="w-[100%] py-0.5 bg-slate-400 my-4"></div>
+
+
+         <!-- diseases treated by neem -->
+         <div class="mt-14 pl-3">
+
+            <div class="text-3xl md:text-7xl font-bold text-slate-700 tracking-wider pb-2 text-center">Neem's Role in Disease Treatment</div>
+
+            <div class="text-2xl md:text-4xl font-semibold pl-2 mt-3 md:mt-5">1. Oral and Dental Issues</div>
+            <ul style="list-style-type:square;" class="pl-7 mt-3" >
+                <li class="font-semibold">Gingivitis and Periodontitis <span class="hidden md:inline font-normal">: Neem is used in treating gum diseases like gingivitis and periodontitis due to its antibacterial and anti-inflammatory properties.</span></li>
+                <li class="font-semibold">Tooth Decay and Cavities <span class="hidden md:inline font-normal">: Neem-based toothpaste or chewing neem sticks (datun) helps in preventing tooth decay and cavities.</span></li>
+                <li class="font-semibold">Bad Breath <span class="hidden md:inline font-normal">: Neem helps eliminate bacteria that cause bad breath.</span></li>
+            </ul>
+
+            <div class="text-2xl md:text-4xl font-semibold pl-2 mt-3">2. Infections</div>
+            <ul style="list-style-type:square;" class="pl-7 mt-3" >
+                <li class="font-semibold">Bacterial Infections <span class="hidden md:inline font-normal">:  Neem treats bacterial infections like staph infections, urinary tract infections (UTIs), and pneumonia.</span></li>
+                <li class="font-semibold">Fungal Infections <span class="hidden md:inline font-normal">: Neem combats fungal infections such as Candida and fungal infections of the nails.</span></li>
+            </ul>
+
+            <div class="text-2xl md:text-4xl font-semibold pl-2 mt-3">3. Skin Disorders</div>
+            <ul style="list-style-type:square;" class="pl-7 mt-3" >
+                <li class="font-semibold">Acne and Pimples <span class="hidden md:inline font-normal">: Neem's antibacterial properties help in treating acne, reducing redness, and preventing further breakouts.</span></li>
+                <li class="font-semibold">Eczema and Psoriasis <span class="hidden md:inline font-normal">: Neem is used to soothe inflammation and irritation associated with eczema and psoriasis.</span></li>
+                <li class="font-semibold">Wounds and Ulcers <span class="hidden md:inline font-normal">: Neem promotes faster healing of wounds, cuts, and skin ulcers, while also preventing infection.</span></li>
+            </ul>
+
+         </div>
+
+
+         <div class="w-[100%] py-0.5 bg-slate-400 my-4"></div>
+
+
+         <!-- how to grow neem -->
+         <div class="mt-14 pl-3">
+
+            <div class="text-3xl md:text-7xl font-bold text-green-700 tracking-wide pb-5 text-center">Steps to grow Neem Plant</div>
+
+            <div class="text-2xl md:text-4xl font-semibold pl-2 mt-3 md:mt-5">Step-1 : Select the Seeds or Sapling</div>
+            <ul style="list-style-type:square;" class="pl-7 mt-3" >
+                <li>You can start by either planting neem seeds or purchasing a young neem sapling from a nursery.</li>
+                <li>If using seeds, choose fresh seeds for better germination.</li>
+            </ul>
+
+            <div class="text-2xl md:text-4xl font-semibold pl-2 mt-3 md:mt-5">Step-2 : Prepare the Soil</div>
+            <ul style="list-style-type:square;" class="pl-7 mt-3" >
+                <li>Neem grows best in well-drained soil. Mix garden soil with organic compost to ensure good drainage and nutrients.</li>
+                <li>Avoid waterlogged soil as neem does not tolerate it.</li>
+            </ul>
+
+            <div class="text-2xl md:text-4xl font-semibold pl-2 mt-3 md:mt-5">Step-3 : Planting the Seeds/Sapling</div>
+            <ul style="list-style-type:square;" class="pl-7 mt-3" >
+                <li>For seeds sow the seeds about 1/2 inch deep in soil, either directly in the garden or in pots.</li>
+                <li>For saplings dig a hole large enough to accommodate the root ball and place the sapling in it.</li>
+                <li>Cover with soil and lightly press around the base.</li>
+            </ul>
+
+            <div class="text-2xl md:text-4xl font-semibold pl-2 mt-3 md:mt-5">Step-4 : Watering</div>
+            <ul style="list-style-type:square;" class="pl-7 mt-3" >
+                <li>Water the plant immediately after planting.</li>
+                <li>Keep the soil moist but not soggy, especially in the early stages. Once established, neem trees require very little water.</li>
+            </ul>
+
+            <div class="text-2xl md:text-4xl font-semibold pl-2 mt-3 md:mt-5">Step-5 : Sunlight</div>
+            <ul style="list-style-type:square;" class="pl-7 mt-3" >
+                <li>Neem requires full sunlight for optimal growth. Ensure it gets at least 4-6 hours of direct sunlight daily.</li>         
+            </ul>
+
+            <div class="text-2xl md:text-4xl font-semibold pl-2 mt-3 md:mt-5">Step-6 : Maintenance and Care</div>
+            <ul style="list-style-type:square;" class="pl-7 mt-3" >
+                <li>As the tree grows, prune any damaged or weak branches to encourage healthy growth.</li>
+                <li>Fertilize occasionally with organic compost, but neem trees are generally low-maintenance.</li>
+            </ul>
+
+           
+
+         </div>
+
+
+         <!-- flowdiagram -->
+
+        <div class="flex gap-8 justify-center items-center mt-14 mb-12">
+            <img src="images/neem seeds.png" class="h-52 w-64" alt="">
+            <i class="fa-solid fa-arrow-right text-6xl font-bold text-green-800"></i>
+            <img src="images/neem plant 2.png" class="h-52 w-64 rounded-xl" alt="">
+            <i class="fa-solid fa-arrow-right text-6xl font-bold text-green-800"></i>
+            <img src="images/neem-tree2.png" class="h-52 w-64 rounded-xl" alt="">
+        </div>
+
+
+
+
+    </div>
+
+    
+    <script src="https://cdn.botpress.cloud/webchat/v2.1/inject.js"></script>
+<script src="https://mediafiles.botpress.cloud/c0b31c79-a860-49f7-88c0-d18bbb555054/webchat/v2.1/config.js"></script>
+
+    <script src="neemconten.js"></script>
+</body>
+</html>

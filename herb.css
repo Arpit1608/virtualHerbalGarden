@@ -1,0 +1,29 @@
+.slide-in-text-left {
+    
+    font-weight: bold;
+    opacity: 0; /* Initially hidden */
+    transform: translateX(-300px); /* Initially off-screen */
+    animation: slideInleft 2s ease-out forwards; /* Animation with 1s duration */
+}
+
+.slide-in-text-right {
+    
+    font-weight: bold;
+    opacity: 0; /* Initially hidden */
+    transform: translateX(300px); /* Initially off-screen */
+    animation: slideInright 2s ease-out forwards; /* Animation with 1s duration */
+}
+
+@keyframes slideInleft {
+    to {
+        opacity: 1; /* Fully visible */
+        transform: translateX(-40%); /* Positioned at original location */
+    }
+}
+
+@keyframes slideInright {
+    to {
+        opacity: 1; /* Fully visible */
+        transform: translateX(30%); /* Positioned at original location */
+    }
+}

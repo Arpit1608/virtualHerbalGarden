@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/f8ee06158f.js"></script>
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="another.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="same.css">
+
+</head>
+
+<body>
+
+    <!-- header section  -->
+    <nav class="pt-2 pb-2 pl-1 bg-white flex justify-between items-center">
+        <div class="flex items-center gap-1 flex-1">
+            <img class="w-[100px] h-[80px]" src="images/logo.png" alt="logo">
+            <span class="text-lg font-bold pl-1">HerbalAura</span>
+        </div>
+
+        <div id="nav-menu" class=" hidden lg:flex gap-[60px] ">
+            <a href="index.html"
+                class="font-semibold hover:text-primary text-xl hover:text-green-700 underlineanimation nav_link">Home</a>
+            <a href="herbs.html"
+                class="font-semibold hover:text-primary text-xl hover:text-green-700 underlineanimation nav_link">Herbs</a>
+            <a href="#"
+                class="font-semibold hover:text-primary text-xl hover:text-green-700 underlineanimation nav_link">Treatment</a>
+            <a href="#"
+                class="font-semibold hover:text-primary text-xl hover:text-green-700 underlineanimation nav_link">Bookmarks</a>
+            <a href="#"
+                class="font-semibold hover:text-primary text-xl hover:text-green-700 underlineanimation nav_link">Login</a>
+        </div>
+
+
+        <button class="text-green-700 lg:hidden w-14 h-14 pt-4" onclick="handlemenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+
+        <div class="flex-1 hidden lg:flex justify-end ">
+            <div class="flex gap-5 items-center pl-[15px] pr-[17px] pt-[10px]  ">
+                <i class="fa-solid fa-camera text-[22px] hover:text-gray-700 hover:cursor-pointer "></i>
+                <div class="vrgarden">
+                    <!-- <a href="" class="btnn btnn1">VR Garden</a> -->
+                    <button class="btnn1">VR Garden</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- this is for mobile (below one)-->
+
+        <div id="nav-dialogue" class="bg-white z-[200] inset-0 fixed pt-[18px] pb-3 pl-5 pr-5 hidden">
+            <div id="nav-bar" class="flex justify-between z-[200]">
+                <div class="flex gap-2 items-center z-[200]">
+                    <img class="w-[68px] h-14" src="images/logo.png" alt="">
+                    <span class="text-[19px] font-bold">HerbalAura</span>
+                </div>
+
+                <button class="text-gray-600 lg:hidden w-6 h-6 pt-[18px]" onclick="handlemenu()">
+                    <img src="images/cross.png" alt="">
+                </button>
+            </div>
+
+            <div class="flex flex-col gap-[18px] mt-6 z-[200]">
+                <a href="#" class="font-bold rounded-md px-1 py-2 hover:bg-green-100 text-gray-500">Home</a>
+                <a href="#" class="font-bold rounded-md px-1 py-2 hover:bg-green-100 text-gray-500">Herbs</a>
+                <a href="#" class="font-bold rounded-md px-1 py-2 hover:bg-green-100 text-gray-500">Treatment</a>
+                <a href="#" class="font-bold rounded-md px-1 py-2 hover:bg-green-100 text-gray-500">Bookmarks</a>
+                <a href="#" class="font-bold rounded-md px-1 py-2 hover:bg-green-100 text-gray-500">Login</a>
+            </div>
+
+            <div class="h-[1px] bg-gray-100 my-6z-[200]"></div>
+        </div>
+    </nav>
+
+    <!-- body  -->
+    <div class="carousel">
+        <div class="list">
+
+            <div class="items">
+                <img src="images/Ajwain.png">
+                <div class="content">
+                    <div class="title">Trachyspermum ammi</div>
+                    <div class="topic">Ajwain</div>
+                    <div class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque iure, culpa dolorem
+                        cum id ipsa pariatur sequi dolores, voluptate inventore consectetur. <div
+                            class="hidden lg:block">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga sit
+                            porro molestias est illum quas possimus quia? Nobis, placeat animi.</div>
+                    </div>
+                    <div class="button">
+                        <button class="py-[10px] px-[14px]">SEE MORE</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="items">
+                <img src="images/Turmric.png">
+                <div class="content">
+                    <div class="title">Curcuma</div>
+                    <div class="topic tumricolor">Turmeric</div>
+                    <div class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque iure, culpa dolorem
+                        cum id ipsa pariatur sequi dolores, voluptate inventore consectetur. <div
+                            class="hidden lg:block">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga sit
+                            porro molestias est illum quas possimus quia? Nobis, placeat animi.</div>
+                    </div>
+                    <div class="button">
+                        <button class="py-[10px] px-[14px]">SEE MORE</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="items">
+                <img src="images/Amla.png">
+                <div class="content">
+                    <div class="title">Phyllanthus emblica</div>
+                    <div class="topic anothercolor">Amla</div>
+                    <div class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque iure, culpa dolorem
+                        cum id ipsa pariatur sequi dolores, voluptate inventore consectetur. <div
+                            class="hidden lg:block">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga sit
+                            porro molestias est illum quas possimus quia? Nobis, placeat animi.</div>
+                    </div>
+                    <div class="button">
+                        <button class="py-[10px] px-[14px]">SEE MORE</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="items">
+                <img src="images/Tulsi.png">
+                <div class="content">
+                    <div class="title">Ocimum tenuiflorum</div>
+                    <div class="topic">Tulsi</div>
+                    <div class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque iure, culpa dolorem
+                        cum id ipsa pariatur sequi dolores, voluptate inventore consectetur. <div
+                            class="hidden lg:block">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga sit
+                            porro molestias est illum quas possimus quia? Nobis, placeat animi.</div>
+                    </div>
+                    <div class="button">
+                        <button class="py-[10px] px-[14px]">SEE MORE</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="items">
+                <img src="images/Ashwagandha.png">
+                <div class="content">
+                    <div class="title">Withania somnifera</div>
+                    <div class="topic anothercolor">Ashwagandha</div>
+                    <div class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque iure, culpa dolorem
+                        cum id ipsa pariatur sequi dolores, voluptate inventore consectetur. <div
+                            class="hidden lg:block">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga sit
+                            porro molestias est illum quas possimus quia? Nobis, placeat animi.</div>
+                    </div>
+                    <div class="button">
+                        <button class="py-[10px] px-[14px]">SEE MORE</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- thumbnail itema -->
+
+        <div class="thumbnail">
+
+
+            <div class="item">
+                <img src="images/Ajwain.png">
+                <div class="content">
+                    <div class="title">Name Slider</div>
+                    <div class="des">Description</div>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="images/Turmric.png">
+                <div class="content">
+                    <div class="title">Name Slider</div>
+                    <div class="des">Description</div>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="images/Amla.png">
+                <div class="content">
+                    <div class="title">Name Slider</div>
+                    <div class="des">Description</div>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="images/Tulsi.png">
+                <div class="content">
+                    <div class="title">Name Slider</div>
+                    <div class="des">Description</div>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="images/Ashwagandha.png">
+                <div class="content">
+                    <div class="title">Name Slider</div>
+                    <div class="des">Description</div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- arrows -->
+        <div class="arrows">
+            <button class="bg-white" id="prev">
+                <</button>
+                    <button class="bg-white" id="next">></button>
+        </div>
+
+
+        <!-- for checking runnig time  -->
+        <div class="time"></div>
+
+
+    </div>
+
+    <!-- scroll effect -->
+    <div 
+        class="mt-12  max-w-[90vw] lg:max-w-[90vw] lg:mx-auto h-24 border border-zinc-300 rounded-xl flex items-center overflow-hidden justify-center mx-6">
+        <div id="fastline" class="flex gap-5 items-center transition-transform ease-linear">
+            <div class="font-semibold whitespace-nowrap text-2xl leading-7">Licorice</div>
+            <span class="text-2xl text-gray-300">•</span>
+
+            <div class="font-semibold whitespace-nowrap text-2xl leading-7">Moringa</div>
+            <span class="text-2xl text-gray-300">•</span>
+
+            <div class="font-semibold whitespace-nowrap text-2xl leading-7">Shatavari</div>
+            <span class="text-2xl text-gray-300">•</span>
+
+            <div class="font-semibold whitespace-nowrap text-2xl leading-7">Sandalwood</div>
+            <span class="text-2xl text-gray-300">•</span>
+
+            <div class="font-semibold whitespace-nowrap text-2xl leading-7">Neem</div>
+            <span class="text-2xl text-gray-300">•</span>
+
+            <div class="font-semibold whitespace-nowrap text-2xl leading-7">Kanchanar</div>
+            <span class="text-2xl text-gray-300">•</span>
+
+            <div class="font-semibold whitespace-nowrap text-2xl leading-7">Yashtimadhu</div>
+            <span class="text-2xl text-gray-300">•</span>
+
+            <div class="font-semibold whitespace-nowrap text-2xl leading-7">Shankhpushpi</div>
+            <span class="text-2xl text-gray-300">•</span>
+
+            <div class="font-semibold whitespace-nowrap text-2xl leading-7">Dashmool</div>
+            <span class="text-2xl text-gray-300">•</span>
+
+            <div class="font-semibold whitespace-nowrap text-2xl leading-7">Pippali</div>
+            <span class="text-2xl text-gray-300">•</span>
+
+            <div class="font-semibold whitespace-nowrap text-2xl leading-7">Bibhitaki</div>
+            <span class="text-2xl text-gray-300">•</span>
+
+            <div class="font-semibold whitespace-nowrap text-2xl leading-7">Jatamansi</div>
+            <span class="text-2xl text-gray-300">•</span>
+
+            <div class="font-semibold whitespace-nowrap text-2xl leading-7">Nagarmotha</div>
+            <span class="text-2xl text-gray-300">•</span>
+
+            <div class="font-semibold whitespace-nowrap text-2xl leading-7">Sariva</div>
+            <span class="text-2xl text-gray-300">•</span>
+
+            <div class="font-semibold whitespace-nowrap text-2xl leading-7">Bhumi Amla</div>
+            <span class="text-2xl text-gray-300">•</span>
+
+            <div class="font-semibold whitespace-nowrap text-2xl leading-7">Balaka</div>
+            <span class="text-2xl text-gray-300">•</span>
+
+            <div class="font-semibold whitespace-nowrap text-2xl leading-7">Shalparni</div>
+            <span class="text-2xl text-gray-300">•</span>
+        </div>
+    </div>
+
+    <!-- About Aurveda section -->
+    <div>
+        <!-- search bar -->
+        <div class="searchbox">
+            <div class="boxx">
+                <input type="text" placeholder="Search for Diseases/Plants.....">
+                <a href="#">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+            </div>
+        </div>
+
+
+        <div class="section sec-1 show-animate reveal bg-green-50">
+            <h1 class="animated text-green-700">AYURVEDA AND IT's HISTORY</h1>
+            <div class="animated para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At, accusamus unde ea
+                quisquam dolorum recusandae? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus
+                perspiciatis hic suscipit recusandae corporis facilis dolor cum! Lorem ipsum dolor sit amet consectetur.
+                Lorem ipsum dolor sit amet. Lorem ipsum dolor sit. <div class="hidden lg:inline"> Laboriosam nam harum
+                    itaque expedita et. Quam odio perspiciatis ipsum? Sunt dolores tenetur minus exercitationem iusto
+                    delectus totam sint doloribus, incidunt in officia, adipisci ipsum error sapiente quas ullam fugiat!
+                    Suscipit laudantium corporis repellendus nulla quos? Repellat, eaque? Magni, odio veniam aliquid
+                    recusandae ducimus porro doloremque consequuntur, natus, numquam animi iusto laborum eaque.
+                    Recusandae facilis voluptates quia, quisquam voluptas et porro dolor odit. Lorem ipsum dolor sit
+                    amet consectetur adipisicing elit. Odit maiores error quidem eos amet. Deserunt similique libero
+                    beatae exercitationem quia, reprehenderit, ad reiciendis fuga tenetur odio eaque et esse. In tenetur
+                    itaque iusto accusantium impedit culpa aspernatur, voluptates saepe assumenda! Lorem ipsum dolor sit
+                    amet.</div>
+            </div>
+            <button class="mt-5 p-3 bg-green-700 text-white rounded-md font-semibold mb-3">Read More</button>
+        </div>
+
+
+        <!-- video section -->
+        <div class="mainvideo">
+            <div class="page1">
+                <h1 class="animeline1">Herbal Garden</h1>
+                <h2 class="animeline2">Essentials Explained</h2>
+                <video class="animeblock" autoplay muted loop src="video/short video.mp4"></video>
+            </div>
+        </div>
+
+
+
+        <div class="mt-10">
+            <h1 class="pl-6 text-[38px] font-bold text-red-600 tracking-wide">Is it effective ?</h1>
+            <div class="px-[15px] text-[20px]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora est hic
+                quaerat eius et, expedita vel totam rerum fuga reprehenderit quisquam, maxime maiores eum delectus.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis recusandae natus sint consectetur
+                culpa, vel eveniet fugit? Et, eum? Assumenda nihil iusto quos laborum ut. <div class="hidden lg:inline">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda nobis quos et accusamus, veniam
+                    quas alias, repudiandae nam ea reprehenderit, obcaecati architecto cumque officia sit provident ut
+                    voluptates soluta? Repellendus necessitatibus quasi doloribus magni voluptate perferendis pariatur
+                    cumque nemo dolore nam quibusdam, mollitia unde assumenda, asperiores quo? Doloribus, consequuntur
+                    atque.</div>
+            </div>
+        </div>
+
+        <div class="mt-10">
+            <h1 class="pl-6 text-[38px] font-bold text-red-600 tracking-wide">Is it safe ?</h1>
+            <div class="px-[15px] text-[20px]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora est hic
+                quaerat eius et, expedita vel totam rerum fuga reprehenderit quisquam, maxime maiores eum delectus.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis recusandae natus sint consectetur
+                culpa, vel eveniet fugit? Et, eum? Assumenda nihil iusto quos laborum ut. <div class="hidden lg:inline">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda nobis quos et accusamus, veniam
+                    quas alias, repudiandae nam ea reprehenderit, obcaecati architecto cumque officia sit provident ut
+                    voluptates soluta? Repellendus necessitatibus quasi doloribus magni voluptate perferendis pariatur
+                    cumque nemo dolore nam quibusdam, mollitia unde assumenda, asperiores quo? Doloribus, consequuntur
+                    atque.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Treaments section -->
+    <div>
+        <div
+            class="mt-20 w-100vw h-[35vh] md:h-[50vh] bg-slate-400 flex flex-col justify-center items-center gap-6 md:gap-10">
+            <h1 class=" text-4xl md:text-8xl font-bold ">Healing Diseases</h1>
+            <h1 class="text-3xl md:text-6xl font-bold">Through Herbs </h1>
+        </div>
+
+        <div class="timelinee">
+
+            <div class="containe left-containe">
+                <img class="rounded-full" src="images/AsthamaImg.png" alt="">
+                <div class="text-box">
+                    <h2 class="pb-2">ASTHMA</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla omnis veritatis ullam quod eum
+                        blanditiis sunt quia, expedita ipsa incidunt?</p>
+                    <span class="left-containe-arrow"></span>
+                </div>
+            </div>
+
+            <div class="containe right-containe">
+                <img class="rounded-full" src="images/arthritisImg.png" alt="">
+                <div class="text-box">
+                    <h2 class="pb-2">ARTHRITIS</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla omnis veritatis ullam quod eum
+                        blanditiis sunt quia, expedita ipsa incidunt?</p>
+                    <span class="right-containe-arrow"></span>
+                </div>
+            </div>
+
+            <div class="containe left-containe">
+                <img class="rounded-full" src="images/rheumatoid arthritisImg.png" alt="">
+                <div class="text-box">
+                    <h2 class="pb-2">RHEUMATOID ARTHRITiS</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla omnis veritatis ullam quod eum
+                        blanditiis sunt quia, expedita ipsa incidunt?</p>
+                    <span class="left-containe-arrow"></span>
+                </div>
+            </div>
+
+            <div class="containe right-containe">
+                <img class="rounded-full" src="images/AnxietyImg.png" alt="">
+                <div class="text-box">
+                    <h2 class="pb-2">ANXIETY</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla omnis veritatis ullam quod eum
+                        blanditiis sunt quia, expedita ipsa incidunt?</p>
+                    <span class="right-containe-arrow"></span>
+                </div>
+            </div>
+
+            <div class="containe left-containe">
+                <img class="rounded-full" src="images/CorestrolImg.png" alt="">
+                <div class="text-box">
+                    <h2 class="pb-2">HIGH CHOLESTEROL</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla omnis veritatis ullam quod eum
+                        blanditiis sunt quia, expedita ipsa incidunt?</p>
+                    <span class="left-containe-arrow"></span>
+                </div>
+            </div>
+
+            <div class="containe right-containe">
+                <img class="rounded-full" src="images/diabties.png" alt="">
+                <div class="text-box">
+                    <h2 class="pb-2">DIABETES</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla omnis veritatis ullam quod eum
+                        blanditiis sunt quia, expedita ipsa incidunt?</p>
+                    <span class="right-containe-arrow"></span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- box section  -->
+    <div class="mx-auto max-w-[80vw] flex flex-col gap-3 mt-[160px]">
+
+
+        <div class="flex gap-3 flex-col md:flex-row">
+            <div class="md:w-[400px] md:h-[280px] h-[160px] bg-slate-200">
+                <h1 class="lg:text-7xl text-5xl font-semibold p-6">3K+</h1>
+                <p class="pl-6 lg:pt-3 text-[18px] tracking-wide">Species of herbs in the world.</p>
+                <p class="hidden md:block text-gray-400 pl-6 mt-20">/001</p>
+            </div>
+
+            <div class="md:w-[400px] md:h-[280px] h-[160px] bg-slate-200">
+                <h1 class="lg:text-7xl text-5xl font-semibold p-6">100+</h1>
+                <p class="pl-6 lg:pt-3 text-[18px] tracking-wide">Diseases Cured.</p>
+                <p class="hidden md:block text-gray-400 pl-6 mt-20">/002</p>
+            </div>
+
+            <div class="md:w-[400px] md:h-[280px] h-[180px] bg-zinc-200 flex md:flex-col items-center">
+                <img class="w-[180px] h-[180px] md:w-[210px] md:h-[210px] p-5" src="images/potImg.png" alt="">
+                <p class="font-semibold underline underline-offset-4 md:text-xl">NATURES HEALING</p>
+            </div>
+        </div>
+
+        <div class="flex gap-3 flex-col md:flex-row">
+            <div class="md:w-[400px] md:h-[280px] h-[160px] bg-slate-200">
+                <p class="text-center mt-14 text-4xl font-bold text-green-600 lg:text-7xl lg:mt-5">NO SIDE EFFECTS
+                </p>
+                <p class="hidden md:block text-gray-400 pl-6 mt-20">/003</p>
+            </div>
+
+            <div class="md:w-[400px] md:h-[280px] h-[180px] bg-zinc-200 hidden md:block">
+                <div class="md:flex md:flex-col items-center">
+                    <img class="md:w-[340px] md:h-[223px] p-5" src="images/BodyImg1.png" alt="">
+                    <p class="font-semibold md:text-2xl"> "ANCIENT WISDOM"</p>
+                </div>
+            </div>
+
+            <div class="md:w-[400px] md:h-[280px] h-[160px] bg-slate-200">
+                <h1 class="lg:text-7xl text-5xl font-semibold p-6">100,000+</h1>
+                <p class="pl-6 lg:pt-3 text-[18px] tracking-wide">Research Papers.</p>
+                <p class="hidden md:block text-gray-400 pl-6 mt-20">/004</p>
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+    <!-- quiz button -->
+    <div class="flex flex-col gap-5 justify-center items-center mt-20 md:mt-24">
+        <div class="md:text-6xl text-3xl font-semibold">Test Your Knowledge</div>
+        <p class="text-center tracking-wide">Give it a try to check your knowledge about the ayurvedic herbs through a
+            QUIZ!</p>
+        <div class="flex items-center gap-8">
+            <i class="fa-solid fa-arrow-right text-5xl text-green-700 quizarrowleft"></i>
+            <button onclick="location.href='https://form.jotform.com/242475167502456'" 
+                class="bg-slate-200 hover:bg-slate-300 py-5 px-12 md:py-6 md:px-14 rounded-xl mt-3 text-lg font-bold tracking-wider">
+                QUIZ
+            </button>
+            <i class="fa-solid fa-arrow-left text-5xl text-green-700 quizarrowright"></i>
+        </div>
+        <button onclick="location.href='leaderboard.html' " class="text-center tracking-wide hover:bg-slate-500 rounded-lg py-4 px-[65px] bg-slate-300 text-lg font-semibold">Leaderboard</button>
+    </div>
+
+    <!-- footer section -->
+    <footer class="mt-[160px]">
+        <div class="row">
+
+            <div class="col">
+                <img src="images/logo.png" class="logo">
+                <p class="text-[16px]">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod libero
+                    adipisci, animi dolor tempora non eos quis error laborum ullam sit deserunt? Maxime,
+                    voluptatibus doloribus.</p>
+            </div>
+
+            <div class="col">
+                <h3>INFORMATION<div class="underline"> <span></span> </div>
+                </h3>
+                <ul>
+                    <li><a class="text-[15px]" href="">Home</a></li>
+                    <li><a class="text-[15px]" href="">Herbs</a></li>
+                    <li><a class="text-[15px]" href="">Treatment</a></li>
+                    <li><a class="text-[15px]" href="">Bookmarks</a></li>
+                    <li><a class="text-[15px]" href="">Login</a></li>
+                </ul>
+            </div>
+
+            <div class="col">
+                <h3>TREATMENT<div class="underline"> <span></span> </div>
+                </h3>
+                <ul>
+                    <li><a class="text-[15px]" href="">Cancer</a></li>
+                    <li><a class="text-[15px]" href="">Nasal Disorders</a></li>
+                    <li><a class="text-[15px]" href="">Ear Disorders</a></li>
+                    <li><a class="text-[15px]" href="">Skin Diseases</a></li>
+
+                </ul>
+            </div>
+
+            <div class="col">
+                <h3>Newsletter <div class="underline"> <span></span> </div>
+                </h3>
+                <form>
+                    <i class="fa-regular fa-envelope"></i>
+                    <input type="email" placeholder="Enter your email id" required>
+                    <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+                </form>
+                <div class="social-icons">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </footer>
+
+
+    <script src="https://cdn.botpress.cloud/webchat/v2.1/inject.js"></script>
+<script src="https://mediafiles.botpress.cloud/c0b31c79-a860-49f7-88c0-d18bbb555054/webchat/v2.1/config.js"></script>
+</body>
+<script src="app.js"></script>
+
+</html>

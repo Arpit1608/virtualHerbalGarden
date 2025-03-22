@@ -1,0 +1,128 @@
+body{
+    background-color: rgb(242, 245, 242);
+}
+
+.leaderboard{
+    max-width: 55em;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    padding: 1em;
+    padding-top: 2em;
+}
+
+.theme-img{
+    width: 50em;
+    border-radius: 15px;
+}
+
+.descriptions{
+    display: inline-block;
+    text-align: center;
+    margin: 1em;
+    color: rgb(27, 114, 3);
+    transform: translateX(6rem);     
+}
+
+.seerch{
+    border-radius: 5px;
+    border: none;
+    border-color: transparent;
+    border-bottom: rgb(6, 142, 6) 2px solid;
+    padding: .5em;
+    font-size: 20px;
+    color: black;
+}
+
+.seerch:focus{
+    outline: none;
+}
+
+table{
+    margin-top: 2em;
+    width: 50em;
+    color: rgb(15, 42, 9);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+table thead{
+    opacity: .8;
+    font-size: 20px;
+    
+}
+
+table img{
+    width: 2em;
+    height: 2em;
+    border-radius: 100%;
+}
+
+table td{
+    max-width: 2em;
+    padding: .5em;
+    text-align: center;
+}
+
+tbody tr{
+    box-shadow: 0 1px rgb(91, 190, 78);
+}
+
+tbody tr:hover{
+    transform: scale(1.025);
+    transition: .2s ease-in-out;
+}
+
+table td:nth-child(2) p{
+    display: inline-block;
+    transform: translateY(-1.5em);
+    padding-left: .5em;
+    text-align: left;
+}
+
+table td:nth-child(2){
+    max-width: 5em;
+}
+
+tbody tr:nth-child(even){
+    background-color: rgb(223, 238, 218);
+}
+
+#winner{
+    color: gold;
+    font-weight: 800;
+}
+
+#runner-up{
+    color: silver;
+    font-weight: 800;
+}
+
+#second-runner-up{
+    color: #cd7f32;
+    font-weight: 800;
+}
+
+@media(max-width:860px){
+    .leaderboard{
+        padding: 0;
+    }
+    
+
+    .theme-img{
+        margin-right: auto;
+        margin-left: auto;
+        display: block;
+        width: 20em;
+    }
+
+    .descriptions{
+        display: block;
+        transform: translateY(0);
+    }
+
+    table{
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+}

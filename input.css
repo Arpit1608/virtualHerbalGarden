@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .underlineanimation {
+        @apply relative
+    }
+
+    .underlineanimation::after{
+        @apply content-[''] bg-green-800 h-[3px] w-[0%] left-0 -bottom-[0px] rounded-xl absolute duration-100
+    }
+
+    .underlineanimation:hover::after{
+        @apply w-[100%]
+    }
+}
